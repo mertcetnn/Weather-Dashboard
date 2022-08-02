@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <!-- search bar start-->
+<aside class="sideBar">
+    <ul class="sideBarUl">
+    <li><h2 >Search for a City</h2></le>
+        <li> <input  id="searchInput"type="search" placeholder="San Dieago" ></le>
+            <li><button id="searchBtn" >Search</button></le>
+</ul>
+
+    <div class="storageNames">
+        <ul id="storageNamesUl">
+            <li id="storageNamesLi"class="cityNames"> <button class="cityNameBtn" type="button">San Dieago</button></li>
+            
+
+        </ul>
+    </div>
+</aside>
+ <!-- search bar end-->
+
+ <!--API start-->
+<main class="apiDatas">
+    <div class="dataMainDiv"><h1 id="dataMainDivSpan">test</h1>
+    <ul id="choosenData">
+    <li class="choosenDataLi">Temp: <div id="choosenTemp"></div></li>
+    <li class="choosenDataLi">Wind: <div id="choosenWind"></div></li>
+    <li class="choosenDataLi">Humidity:<div id="choosenHumidty"></div></li>
+    <li class="choosenDataLi">UV Index:<span id="uvIndex">sssddddd</span></li>
+    </ul>
+     </div>
+<!--Forcast box start-->
+  
+    <h2 id="forecast-h2" >5-Day Forescast</h2>
+    <div class="forcast-box">
+    <div class="week-forecast">
+  
+  <ul class="day1">
+    <li class="week-forecast-td"> <h5 id="week-forecast-date">22/22/22</h5></li>
+    <li class="week-forecast-td"><img src="" alt=""></li>
+    <li class="week-forecast-td">Temp:<div id="week-forecast-temp"></div></li>
+    <li class="week-forecast-td">Wind:<div id="week-forecast-wind"></div></li>
+    <li class="week-forecast-td">Humidity:<div id="week-forecast-humidty"></div></li>
+
+  </ul>
+</div>
+   </div>
+<!--forcast box end-->
+
+
+
+
+
+
+
+</main>
+<!--API End-->
+
+
+
+
+
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
