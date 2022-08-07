@@ -1,45 +1,51 @@
-
+var cityNameBtn=document.getElementsByClassName('cityNameBtn')
 var input =document.getElementById('domTextElement');
-const btn =document.getElementById('searchBtn');
+const btn =document.getElementById('searchBtn').addEventListener("click",btnF)
 
- 
-btn.onclick=function (){
-  localStorage.setItem('City Name',input.value )
+ // each click takes value and store in local storage
+function btnF(){
+localStorage.setItem('City',input.value )}
+// can not make it more than 1 history of search
+
+
+
+
+//takes setted local storage value put in history
+
+var SavedCity=localStorage.getItem("City")
+if(SavedCity==null){
+  var num=0
+}else {var num =SavedCity.length}
+
+
+
+
+//creating <li>
+var  NewListItem =function(newLi){
+var li =document.createElement("li")
+li.className="CityNames"
+var liBtn=document.createElement("button")
+liBtn.className="cityNameBtn"
+liBtn.type="button"
+var liSpan =document.createElement("span")
+liSpan.className="storageNamesLi"
+
+liBtn.appendChild(liSpan)
+li.appendChild(liBtn)
+aside.div.ul.appendChild(li)
+
+
 }
 
 
 
+NewListItem=SavedCity
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-function search(){
-var searchQuery = document.getElementById('searchInput').value
-
-
-}
-
-
-      // Get the item from LocalStorage
-  var savedItems = JSON.parse(localStorage.getItem("storageNamesLi"))
-  if (savedItems == null) {
-    var num = 0
-}
-else {
-    var num = savedItems.length
-}
 
 
 
