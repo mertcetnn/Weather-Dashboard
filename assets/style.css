@@ -25,6 +25,11 @@ position: absolute;
   text-align: left;
 
 }
+.cityNamesh2{
+    font-size: large;
+    color: black;
+    font-weight: bold;
+}
 #searchInput{
     width: 99.9%;
     justify-content: center;

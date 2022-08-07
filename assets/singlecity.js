@@ -1,12 +1,40 @@
-function search() {
-    // Get the user's input from the page
-    var searchQuery = document.getElementById('searchInput').value;}
-    // Get the item from LocalStorage
-  var localStorageItem = localStorage.getItem(searchQuery);
 
-var savedItems = JSON.parse(localStorage.getItem("storageNamesLi"))
+var input =document.getElementById('domTextElement');
+const btn =document.getElementById('searchBtn');
 
-if (savedItems == null) {
+ 
+btn.onclick=function (){
+  localStorage.setItem('City Name',input.value )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function search(){
+var searchQuery = document.getElementById('searchInput').value
+
+
+}
+
+
+      // Get the item from LocalStorage
+  var savedItems = JSON.parse(localStorage.getItem("storageNamesLi"))
+  if (savedItems == null) {
     var num = 0
 }
 else {
@@ -15,6 +43,14 @@ else {
 
 
 
+
+
+
+
+
+
+
+  
 
 
 
