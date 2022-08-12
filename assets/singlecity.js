@@ -1,30 +1,47 @@
 var cityNameBtn = document.getElementsByClassName("cityNameBtn");
 
-const btn = document
-  .getElementById("searchBtn")
-  .addEventListener("click", addItem);
+var valueOfInpt =0;
+
+//adding event listener for "searchBtn"
+const btnStore = document.getElementById("searchBtn")
+.addEventListener("click", addItem);
+
 
 // each click takes value and store in local storage
 function addItem() {
   var input = document.getElementById("domTextElement");
-  var newCity=localStorage.setItem("addItem", input.value);
-  return;
+ valueOfInpt++;
+localStorage.setItem(input.value,"addItem");
+                    //(value,key)
+  return ;
 }
+if (localStorage ==null)
+  {value.input=0}
+  else{length=valueOfInpt}
 
-//takes setted local storage value put in history
+
+  //takes setted local storage value put in history
 var getData = (document.getElementById("domTextElement").value =
   localStorage.getItem("addItem"));
-if (getData == null) {
-  var num = 0;
-} else {
-  var num = getData.length;
- 
-}
-let x = localStorage.length;
-for (i = 0; i < localStorage.length; i++) {
-  x = localStorage.key(i);}
 
-addItem();
+
+ 
+ 
+//   function clearLocalStorage(){
+//     localStorage.removeItem("additem")
+//     return localStorage= null;
+// }
+// clearLocalStorage();
+
+
+
+
+
+
+
+
+
+
 
 //creating <li>
 var NewListItem = function (newLi) {
