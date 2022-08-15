@@ -15,6 +15,7 @@
     </header>
     <!-- search bar start-->
 <aside class="sideBar">
+ 
     <ul class="sideBarUl">
      <li class="inputLine"> <label  class="cityNamesh2" for="domTextElement">City Names: </label></li>
      <li class="inputLine"> <input  type="text"  id="domTextElement" placeholder="San Diego"></li> 
@@ -22,19 +23,17 @@
 <li class="btnLine"><button type="button" id="searchBtn" >Search</button></li>
 </ul>
 
-    <div class="storageNames">
-        <ul id="storageNamesUl">
-            <li class="cityNames"> <button class="cityNameBtn" type="button"><span class="storageNamesLi">test</span></button></li>
-            
 
-        </ul>
+    <div id="storageNames">
+        
     </div>
+  
 </aside>
  <!-- search bar end-->
 
  <!--API start-->
 <main class="apiDatas">
-    <div class="dataMainDiv"><h1 id="dataMainDivSpan"></h1>
+    <div class="dataMainDiv" id="dataMainDivSpan">
     <ul id="choosenData">
     <li class="choosenDataLi">Temp: <div id="choosenTemp"></div></li>
     <li class="choosenDataLi">Wind: <div id="choosenWind"></div></li>
