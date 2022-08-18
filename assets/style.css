@@ -115,3 +115,12 @@ position: absolute;
     background-color: rgb(240, 236, 236);
     display: flex;
 }
+
+
+#icon{
+    width:125px
+}
+
+#choosenTemp{
+    font-weight: bold;
+}
