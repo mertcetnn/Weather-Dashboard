@@ -101,26 +101,33 @@ position: absolute;
     height: 450px;
     margin-left: 27%;
     margin-top: 2%;
- display: flex;
- justify-content: left;
-
-
+ 
 
 }
-.week-forecast{
-    width: 13%;
-    height: 180px;
+#week-forecast{
+    width: 15%;
+    height: 250px;
     margin-left:4%;
     margin-top: 3%;
-    background-color: rgb(240, 236, 236);
+    background-color: rgb(83, 23, 23);
     display: flex;
+ }
+ .week-forecast-li{
+    padding-top: 15px;
+    font-weight: bold;
+ }
+#week-forecast .day{
+    background-color: white;
+    width: 100%;
 }
 
 
 #icon{
     width:125px
 }
-
+#dataMainDivSpan{
+    font-weight: bold;
+}
 #choosenTemp{
     font-weight: bold;
 }

@@ -32,8 +32,9 @@
  <!-- search bar end-->
 
  <!--API start-->
-<main class="apiDatas">
-    <div class="dataMainDiv" id="dataMainDivSpan">
+<main class="apiDatas" id="main">
+    <div class="dataMainDiv" id="dataDiv">
+    <h1  id="dataMainDivSpan"></h1><img id="icon" src="" alt=""><!--add style to icon-->
     <ul id="choosenData">
     <li class="choosenDataLi">Temp: <div id="choosenTemp"></div></li>
     <li class="choosenDataLi">Wind: <div id="choosenWind"></div></li>
@@ -46,9 +47,13 @@
      <h2 id="forecast-h2" >5-Day Forescast</h2>
 <!--Forcast box start-->
 <div class="forcast-box">
-    <div class="week-forecast">
+
+<!--forcast box end-->
+<!--Forcast box start-->
+
+    <!--<div id="week-forecast">
   
-  <ul class="day1">
+  <ul class="day">
     <li class="week-forecast-li"> <h5 id="week-forecast-date">22/22/22</h5></li>
     <li class="week-forecast-li"><img id="week-forecast-img" ></li>
     <li class="week-forecast-li">Temp:<div id="week-forecast-temp"></div></li>
@@ -56,29 +61,14 @@
     <li class="week-forecast-li">Humidity:<div id="week-forecast-humidty"></div></li>
 
   </ul>
-    
-</div>
-<!--forcast box end-->
-<!--Forcast box start-->
-
-    <div class="week-forecast">
-  
-  <ul class="day1">
-    <li class="week-forecast-li"> <h5 id="week-forecast-date">22/22/22</h5></li>
-    <li class="week-forecast-li"><img id="week-forecast-img" ></li>
-    <li class="week-forecast-li">Temp:<div id="week-forecast-temp"></div></li>
-    <li class="week-forecast-li">Wind:<div id="week-forecast-wind"></div></li>
-    <li class="week-forecast-li">Humidity:<div id="week-forecast-humidty"></div></li>
-
-  </ul>
-</div>
+</div>-->
 
 <!--forcast box end-->
 <!--Forcast box start-->
 
-<div class="week-forecast">
+<div id="week-forecast">
   
-    <ul class="day1">
+    <ul class="day">
       <li class="week-forecast-li"> <h5 id="week-forecast-date">22/22/22</h5></li>
       <li class="week-forecast-li"><img id="week-forecast-img" ></li>
       <li class="week-forecast-li">Temp:<div id="week-forecast-temp"></div></li>
@@ -112,6 +102,6 @@
 
 
     <script src="./assets/singlecity.js"></script>
-    <script src="./assets/allsearch.js"></script>
+    <script src="./assets/5days.js"></script>
 </body>
 </html>
