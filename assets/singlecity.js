@@ -78,7 +78,6 @@ function pickCity(singleCity) {
      console.log(year,- month,- day)
       
 
-     for (i=1 ;i<6 ;i++){
 
   
       var mainDivH1=document.getElementById('dataMainDivSpan')
@@ -88,9 +87,9 @@ function pickCity(singleCity) {
 
 
 
-
+      "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
       
-      var iconImg="http://http://openweathermap.org/img/wn/"+ iconName +"@2x.png"
+      var iconImg="http://http://openweathermap.org/img/wn/"+ iconName +".png"
     
        var weather=data.list[1].weather[0]
       var iconName=data.list[1].weather[0].icon
@@ -115,66 +114,7 @@ function pickCity(singleCity) {
 
 
 
-//appenChild variebles section
 
-      var weekDayForecast=document.getElementById('week-forecast')
- 
-
-
-      const mainDiv=document.createElement('div')
-      mainDiv.setAttribute("id","week-forecast")
-      const mainUl=document.createElement('ul')
-      mainUl.setAttribute('class',"day")
-      const mainLi =document.createElement('li')
-      mainLi.setAttribute('class','week-forecast-li')
-      const h5=document.createElement('h5')
-      h5.setAttribute("id","week-forecast-date")
-
-      const secondLi=document.createElement('li')
-      secondLi.setAttribute('class','week-forecast-li')
-      const mainImg=document.createElement('img')
-      mainImg.setAttribute('id','week-forecast-img')
-      mainImg.setAttribute('src',iconImg)
-
-      const thirdLi=document.createElement('li')
-      thirdLi.setAttribute('class','week-forecast-li')
-      const tempDiv=document.createElement("div")
-      tempDiv.setAttribute('id','week-forecast-temp')
-
-      const forthLi=document.createElement('li')
-      forthLi.setAttribute('class','week-forecast-li')
-      const windDiv=document.createElement('div')
-      windDiv.setAttribute('id','week-forecast-wind')
-
-      const fifthLi=document.createElement('li')
-      fifthLi.setAttribute('class','week-forecast-li')
-      const humDiv=document.createElement('div')
-      humDiv.setAttribute('id','week-forecast-humidty')
-
-
-
-// append child sectoin
-
-      weekDayForecast.appendChild(mainDiv)
-      mainDiv.appendChild(mainUl)
-
-      mainUl.appendChild(mainLi)
-      mainLi.appendChild(h5)
-
-      mainUl.appendChild(secondLi)
-      secondLi.appendChild(mainImg)
-
-       mainUl.appendChild(thirdLi)
-       thirdLi.appendChild(tempDiv)
-
-       mainUl.appendChild(forthLi)
-       forthLi.appendChild(windDiv)
-
-        mainUl.appendChild(fifthLi)
-      fifthLi.appendChild(humDiv)
-
-
-      }
      
 
     
@@ -190,3 +130,64 @@ function pickCity(singleCity) {
   
   return;
 }
+//appenChild variebles section
+
+
+  
+
+   const mainDiv=document.createElement('div')
+   mainDiv.setAttribute("id","week-forecast")
+   const mainLi =document.createElement('p')
+   mainLi.setAttribute('class','week-forecast-p')
+   const h5=document.createElement('h5')
+   h5.setAttribute("id","week-forecast-date")
+
+   const secondLi=document.createElement('p')
+   secondLi.setAttribute('class','week-forecast-p')
+   const mainImg=document.createElement('img')
+   mainImg.setAttribute('id','week-forecast-img')
+   mainImg.setAttribute('src',iconImg)
+
+   const thirdLi=document.createElement('p')
+   thirdLi.setAttribute('class','week-forecast-p')
+   const tempDiv=document.createElement("div")
+   tempDiv.setAttribute('id','week-forecast-temp')
+
+   const forthLi=document.createElement('p')
+   forthLi.setAttribute('class','week-forecast-p')
+   const windDiv=document.createElement('div')
+   windDiv.setAttribute('id','week-forecast-wind')
+
+   const fifthLi=document.createElement('p')
+   fifthLi.setAttribute('class','week-forecast-p')
+   const humDiv=document.createElement('div')
+   humDiv.setAttribute('id','week-forecast-humidty')
+
+
+
+// append child sectoin
+
+  weekDayForecast.appendChild(mainDiv)
+   mainDiv.appendChild,mainLi
+
+  
+   mainLi.appendChild(h5)
+
+   mainUl.appendChild(secondLi)
+   secondLi.appendChild(mainImg)
+
+    mainUl.appendChild(thirdLi)
+    thirdLi.appendChild(tempDiv)
+
+    mainUl.appendChild(forthLi)
+    forthLi.appendChild(windDiv)
+
+     mainUl.appendChild(fifthLi)
+   fifthLi.appendChild(humDiv)
+   var weekDayForecast=document.getElementById('week-forecast')
+
+   
+
+
+   
+  

@@ -109,17 +109,15 @@ position: absolute;
     height: 250px;
     margin-left:4%;
     margin-top: 3%;
-    background-color: rgb(83, 23, 23);
-    display: flex;
+    background-color: rgb(202, 202, 202);
+    display: list-item;
  }
- .week-forecast-li{
+ 
+ .week-forecast-p{
     padding-top: 15px;
     font-weight: bold;
  }
-#week-forecast .day{
-    background-color: white;
-    width: 100%;
-}
+
 
 
 #icon{
