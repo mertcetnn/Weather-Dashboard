@@ -117,12 +117,12 @@ function pickCity(singleCity) {
 
 //appenChild variebles section
 
-      var weekDayForecast=document.getElementById('forcast-box')
+      var weekDayForecast=document.getElementById('week-forecast')
  
 
 
       const mainDiv=document.createElement('div')
-      mainDiv.setAttribute("id","week-forecast1")
+      mainDiv.setAttribute("id","week-forecast")
       const mainUl=document.createElement('ul')
       mainUl.setAttribute('class',"day")
       const mainLi =document.createElement('li')
