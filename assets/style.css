@@ -9,7 +9,7 @@ header h1 {
   text-align: center;
   background: -webkit-linear-gradient(left, rgb(0, 115, 255), rgb(7, 0, 36));
   color: white;
-  width: 92%;
+  width: 100%;
   
 }
 
@@ -68,7 +68,7 @@ position: absolute;
 
 .dataMainDiv{
     border: 1px solid black;
-    width: 65%;
+    width: 70%;
     margin-left: 27%;
     margin-top: 1%;
     display: flexbox;
@@ -94,30 +94,39 @@ position: absolute;
     margin-top: 2%;
 
 }
+
 .forcast-box{
     border: 1px solid black;
     background-color: rgb(119, 171, 149);
-    width: 65%;
-    height: 450px;
+    width: auto;
+    height: auto;
     margin-left: 27%;
     margin-top: 2%;
  
 
 }
-#week-forecast{
+#week-forecast-data{
     width: 15%;
     height: 250px;
-    margin-left:4%;
+    margin-left:7%;
     margin-top: 3%;
-    background-color: rgb(202, 202, 202);
-    display: list-item;
+    background-color: white;
+    display: inline-block;
+    padding-left: 90px;
  }
  
  .week-forecast-p{
     padding-top: 15px;
+    padding-left: 50px;
     font-weight: bold;
- }
 
+ }
+ #week-forecast-img{
+    width: 40%;
+    border: 3px solid red;
+    border-radius: 15px;
+    margin-left: 30%;
+ }
 
 
 #icon{
