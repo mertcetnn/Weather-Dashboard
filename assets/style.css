@@ -97,7 +97,7 @@ position: absolute;
 
 .forcast-box{
     border: 1px solid black;
-    background-color: rgb(119, 171, 149);
+    background-color: rgba(39, 137, 159, 0.33);
     width: auto;
     height: auto;
     margin-left: 27%;
@@ -117,20 +117,21 @@ position: absolute;
  
  .week-forecast-p{
     padding-top: 15px;
-    padding-left: 50px;
+    padding-left: 10px;
     font-weight: bold;
+    color: black;
 
  }
  #week-forecast-img{
     width: 40%;
     border: 3px solid red;
     border-radius: 15px;
-    margin-left: 30%;
+    margin-left: 10%;
  }
 
 
-#icon{
-    width:125px
+#mainIcon{
+    width:85px
 }
 #dataMainDivSpan{
     font-weight: bold;
@@ -138,3 +139,4 @@ position: absolute;
 #choosenTemp{
     font-weight: bold;
 }
+
