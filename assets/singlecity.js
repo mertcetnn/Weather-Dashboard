@@ -87,6 +87,8 @@ function pickCity(singleCity) {
           let today = data.list[0];
           console.log(year, -month, -day);
 
+          // PULLing API data to todays weather box
+
           var mainDivH1 = document.getElementById("dataMainDivSpan");
           mainDivH1.textContent = data.city.name;
 
@@ -108,9 +110,8 @@ function pickCity(singleCity) {
 
           for (let i = 0; i < 5; i++) {
 
-            var iconName = data.list[0].weather[i].icon;
-            var iconImg ="https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png";
-            console.log(iconName);
+         const symbol=data.list[i].weather[0].icon 
+            var iconImg ="https://openweathermap.org/img/wn/" + symbol+ "@2x.png";
             console.log(iconImg);
 
             const mainDiv = document.createElement("div");
@@ -149,29 +150,31 @@ function pickCity(singleCity) {
 
             // append child sectoin
             const weekDayForecast = document.getElementById("week-forecast");
-            weekDayForecast.appendChild(mainDiv);
-            mainDiv.appendChild(mainP);
+            weekDayForecast.append(mainDiv);
+            mainDiv.append(mainP);
 
-            mainP.appendChild(h5);
+            mainP.append(h5);
 
-            mainDiv.appendChild(secondP);
-            secondP.appendChild(mainImg);
+            mainDiv.append(secondP);
+            secondP.append(mainImg);
 
-            mainDiv.appendChild(thirdP);
-            thirdP.appendChild(tempDiv);
+            mainDiv.append(thirdP);
+            thirdP.append(tempDiv);
 
-            mainDiv.appendChild(forthP);
-            forthP.appendChild(windDiv);
+            mainDiv.append(forthP);
+            forthP.append(windDiv);
 
-            mainDiv.appendChild(fifthP);
-            fifthP.appendChild(humDiv);
+            mainDiv.append(fifthP);
+            fifthP.append(humDiv);
           }
         });
-      
-        cityBtn.addEventListener("click", (event) => {
-          event.preventDefault(); // search
-          pickCity(event.target.innerHTML);
-        });
+  
+        // cityBtn.addEventListener("click", (event) => {
+        //   event.preventDefault(); // search
+        //   console.log(event)
+        //   pickCity(event.target.innerHTML);
+        //   return 
+        // });
                 
       if (data.error) {
         alert("No matching location found.");
