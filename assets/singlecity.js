@@ -43,23 +43,44 @@ function pickCity(singleCity) {
       var lat = data.location.lat;
       var lon = data.location.lon;
       var uvFirstData = data.current.uv;
-      searchHistory.push(data.location.name);
+
+      if(!searchHistory.includes(data.location.name)){
+     
+
+        searchHistory.push(data.location.name);
+
+        for (let i = 0; i < searchHistory.length; i++) {
+          console.log(searchHistory[i]);
+          if (searchHistory[i] == data.location.name) {
+            cityBtn = document.createElement("button");
+            cityBtn.setAttribute("id", data.location.name);
+            cityBtn.setAttribute("class","cityNameBtn")
+            cityBtn.textContent = data.location.name;
+            divCity.appendChild(cityBtn);
+  
+            cityBtn.addEventListener("click", (event) => {
+              event.preventDefault(); // search
+              console.log(event)
+              pickCity(event.target.innerHTML);
+               
+            }); 
+          }
+  
+        }
+
+      }
+
+
+
+    
 
       console.log(searchHistory);
 
       //setting json.stringfy data to local storage
 
       localStorage.setItem("pastCity", JSON.stringify(searchHistory));
-
-      for (let i = 0; i < searchHistory.length; i++) {
-        console.log(searchHistory[i]);
-        if (searchHistory[i] == data.location.name) {
-          cityBtn = document.createElement("button");
-          cityBtn.setAttribute("id", data.location.name);
-          cityBtn.textContent = data.location.name;
-          divCity.appendChild(cityBtn);
-        }
-      }
+// creating button with local storage data
+    
 
       //using second api  fetching and taking data from inside
       var API2 = "3604a2a806490268bfd78ce7aba0d8e9";
@@ -102,27 +123,38 @@ function pickCity(singleCity) {
           choosenHumidty.textContent = data.list[1].main.humidity;
 
           var choosenUV = document.getElementById("uvIndex");
-          choosenUV.textContent = uvFirstData;
+          choosenUV.textContent = uvFirstData;  
 
-          //appenChild variebles section
+       
+          ///          
+           function myFunction() {
+            const list = document.getElementById("week-forecast");
+            while (list.hasChildNodes()) {
+              list.removeChild(list.firstChild);
+            }
+          };
+          myFunction();
+ 
 
-          ///
 
-          for (let i = 0; i < 5; i++) {
+         //appenChild variebles section
+         // x defines array list index
+         var x=0
+          for (let i = 0 ; i < 5; i++) {
 
-         const symbol=data.list[i].weather[0].icon 
+         const symbol=data.list[x].weather[0].icon 
             var iconImg ="https://openweathermap.org/img/wn/" + symbol+ "@2x.png";
             console.log(iconImg);
 
             const mainDiv = document.createElement("div");
-            mainDiv.setAttribute("id", "week-forecast-data");
+            mainDiv.setAttribute("class", "week-forecast-data");
 
             const mainP = document.createElement("div");
             mainP.setAttribute("class", "week-forecast-p");
 
             const h5 = document.createElement("h5");
             h5.setAttribute("id", "week-forecast-date");
-            h5.textContent = data.list[i].dt_txt;
+            h5.textContent = data.list[x].dt_txt;
 
             const secondP = document.createElement("div");
             secondP.setAttribute("class", "week-forecast-p");
@@ -134,20 +166,21 @@ function pickCity(singleCity) {
             thirdP.setAttribute("class", "week-forecast-p");
             const tempDiv = document.createElement("h5");
             tempDiv.setAttribute("id", "week-forecast-temp");
-            tempDiv.textContent = "TEMP:" + data.list[i].main.temp;
+            tempDiv.textContent = "TEMP:" + data.list[x].main.temp;
 
             const forthP = document.createElement("div");
             forthP.setAttribute("class", "week-forecast-p");
             const windDiv = document.createElement("h5");
             windDiv.setAttribute("id", "week-forecast-wind");
-            windDiv.textContent = "WIND SPEED:" + data.list[i].wind.speed;
+            windDiv.textContent = "WIND SPEED:" + data.list[x].wind.speed;
 
             const fifthP = document.createElement("div");
             fifthP.setAttribute("class", "week-forecast-p");
             const humDiv = document.createElement("h5");
             humDiv.setAttribute("id", "week-forecast-humidty");
-            humDiv.textContent = "HUMIDITY:" + data.list[i].main.humidity; ///// check this
-
+            humDiv.textContent = "HUMIDITY:" + data.list[x].main.humidity; ///// check this
+            x+=8
+            console.log(x)
             // append child sectoin
             const weekDayForecast = document.getElementById("week-forecast");
             weekDayForecast.append(mainDiv);
@@ -169,12 +202,7 @@ function pickCity(singleCity) {
           }
         });
   
-        // cityBtn.addEventListener("click", (event) => {
-        //   event.preventDefault(); // search
-        //   console.log(event)
-        //   pickCity(event.target.innerHTML);
-        //   return 
-        // });
+        
                 
       if (data.error) {
         alert("No matching location found.");

@@ -105,7 +105,7 @@ position: absolute;
  
 
 }
-#week-forecast-data{
+.week-forecast-data{
     width: 15%;
     height: 250px;
     margin-left:7%;
